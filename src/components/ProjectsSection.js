@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       title: "SofiaRose",
       description: "Персональный проект портфолио",
       technologies: "React, JavaScript, CSS",
-      image: "/images/sofia-rose.jpg",
+      image: process.env.PUBLIC_URL + "/images/sofia-rose.jpg",
       demoUrl: "https://ppport1.vercel.app/"
     },
     {
@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       title: "AlexFoto",
       description: "Персональный веб-сайт",
       technologies: "React, JavaScript, HTML/CSS",
-      image: "/images/alex-foto.jpg",
+      image: process.env.PUBLIC_URL + "/images/alex-foto.jpg",
       demoUrl: "https://me-port-pied.vercel.app"
     },
     {
@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       title: "Uncle Kolya Restaurant",
       description: "Веб-сайт ресторана",
       technologies: "React, Node.js, MongoDB",
-      image: "/images/uncle-kolya.jpg",
+      image: process.env.PUBLIC_URL + "/images/uncle-kolya.jpg",
       demoUrl: "https://uncle-kolya-restaurant.vercel.app"
     },
     {
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       title: "Alina Volkova",
       description: "Персональный сайт для дизайнера",
       technologies: "React, JavaScript, CSS",
-      image: "/images/alina-volkova.jpg",
+      image: process.env.PUBLIC_URL + "/images/alina-volkova.jpg",
       demoUrl: "https://alina-volkova.vercel.app"
     }
   ];
