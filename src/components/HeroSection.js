@@ -17,6 +17,12 @@ const HeroSection = () => {
             <div className="hero-buttons">
               <button className="primary-btn">Смотреть проекты</button>
               <button className="secondary-btn">Связаться со мной</button>
+              <button 
+                className="highlight-btn" 
+                onClick={() => window.open('https://ваше-второе-портфолио.com', '_blank')}
+              >
+                Хотите сэкономить десятки тысяч рублей?
+              </button>
             </div>
           </div>
           <div className="hero-book">
