@@ -7,21 +7,21 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>Веб-разработчик</h1>
-            <p className="hero-subtitle">Создаю современные веб-приложения и сайты</p>
+            <h1>Автоматизация бизнес-процессов</h1>
+            <p className="hero-subtitle">Помогаю компаниям работать быстрее и без лишней рутины</p>
             <p className="hero-description">
-              Привет! Я специализируюсь на создании качественных веб-решений, 
-              которые помогают бизнесу достигать своих целей. Ниже представлены 
-              мои лучшие работы.
+              Привет! Я начинающий специалист по автоматизации и создаю решения, которые упрощают работу, 
+              уменьшают ошибки и экономят время. Ниже ты найдешь мои первые проекты, где я применяю 
+              подходы, которые реально облегчают жизнь бизнесу.
             </p>
             <div className="hero-buttons">
               <button className="primary-btn">Смотреть проекты</button>
               <button className="secondary-btn">Связаться со мной</button>
               <button 
                 className="highlight-btn" 
-                onClick={() => window.open('https://ваше-второе-портфолио.com', '_blank')}
+                onClick={() => window.open('https://pet-web-portfolio.vercel.app/', '_blank')}
               >
-                Хотите сэкономить десятки тысяч рублей?
+                Хотите сделать стильный сайт?
               </button>
             </div>
           </div>
