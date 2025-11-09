@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '',
     message: ''
   });
 
@@ -18,6 +18,8 @@ const ContactSection = () => {
     e.preventDefault();
     
     try {
+      console.log('Отправка данных на n8n webhook:', formData);
+      
       // Отправляем данные в n8n webhook
       const response = await fetch('https://petuam.app.n8n.cloud/webhook/avt', {
         method: 'POST',
@@ -27,15 +29,22 @@ const ContactSection = () => {
         body: JSON.stringify(formData),
       });
       
+      console.log('Ответ от сервера:', response.status, response.statusText);
+      
       if (response.ok) {
         alert('Спасибо за ваш запрос! Я свяжусь с вами в ближайшее время для обсуждения возможностей автоматизации ваших бизнес-процессов.');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', phone: '', message: '' });
       } else {
-        alert('Произошла ошибка при отправке запроса. Пожалуйста, попробуйте еще раз.');
+        // Более детальная обработка ошибок
+        const errorText = await response.text();
+        console.error('Ошибка сервера:', errorText);
+        console.error('Статус ответа:', response.status);
+        console.error('Заголовки ответа:', [...response.headers.entries()]);
+        alert(`Произошла ошибка при отправке запроса. Статус: ${response.status}. Пожалуйста, попробуйте еще раз.`);
       }
     } catch (error) {
-      alert('Произошла ошибка при отправке запроса. Пожалуйста, попробуйте еще раз.');
-      console.error('Error:', error);
+      console.error('Ошибка сети:', error);
+      alert('Произошла ошибка при отправке запроса. Проверьте подключение к интернету и попробуйте еще раз.');
     }
   };
 
@@ -64,12 +73,12 @@ const ContactSection = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="phone">Номер телефона</label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
                 required
               />

@@ -685,6 +685,10 @@ h2 {
   box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.2);
 }
 
+.form-group input[type="tel"] {
+  /* Стили для поля телефона */
+}
+
 .submit-btn {
   background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
   color: white;
