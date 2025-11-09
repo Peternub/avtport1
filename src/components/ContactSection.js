@@ -18,8 +18,8 @@ const ContactSection = () => {
     e.preventDefault();
     
     try {
-      // Замените URL на ваш URL из Google Apps Script
-      const response = await fetch('URL_ВАШЕГО_GOOGLE_SCRIPT', {
+      // Отправляем данные в n8n webhook
+      const response = await fetch('https://petuam.app.n8n.cloud/webhook-test/avt', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
