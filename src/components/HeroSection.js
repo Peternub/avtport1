@@ -2,6 +2,20 @@ import React from 'react';
 import '../App.css';
 
 const HeroSection = () => {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="hero-section">
       <div className="container">
@@ -15,8 +29,8 @@ const HeroSection = () => {
               подходы, которые реально облегчают жизнь бизнесу.
             </p>
             <div className="hero-buttons">
-              <button className="primary-btn">Смотреть проекты</button>
-              <button className="secondary-btn">Связаться со мной</button>
+              <button className="primary-btn" onClick={scrollToProjects}>Смотреть проекты</button>
+              <button className="secondary-btn" onClick={scrollToContact}>Связаться со мной</button>
               <button 
                 className="highlight-btn" 
                 onClick={() => window.open('https://pet-web-portfolio.vercel.app/', '_blank')}

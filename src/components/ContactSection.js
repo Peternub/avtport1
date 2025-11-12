@@ -49,7 +49,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       <div className="container">
         <h2>Обсудить автоматизацию вашего бизнеса</h2>
         <div className="contact-content">

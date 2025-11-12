@@ -26,7 +26,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <div className="container">
         <h2>Мои проекты по автоматизации</h2>
         <div className="projects-grid">
