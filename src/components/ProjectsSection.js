@@ -6,8 +6,8 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "Телеграм бот \"Самоответчик\"",
-      description: "Телеграм бот, который отвечает на вопросы пользователей, может бронировать услуги и сохранять данные в Excel таблицу.",
-      technologies: "Python, Telegram Bot API, Excel API",
+      description: "Телеграм бот, который отвечает на вопросы пользователей, может бронировать услуги и сохранять данные в Google Sheets.",
+      technologies: "Python, Telegram Bot API, Google Sheets API",
       image: process.env.PUBLIC_URL + "/images/tg-botq.jpg",
       demoUrl: "https://t.me/Drive_TechBot"
     },
