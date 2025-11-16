@@ -21,7 +21,7 @@ const ContactSection = () => {
       console.log('Отправка данных на n8n webhook:', formData);
       
       // Отправляем данные в n8n webhook
-      const response = await fetch('https://fgnmfgnm.app.n8n.cloud/webhook-test/avt', {
+      const response = await fetch('https://fgnmfgnm.app.n8n.cloud/webhook/avt', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
