@@ -23,9 +23,7 @@ const ProjectsSection = () => {
       id: 3,
       title: "Агент который отвечает вашим клиентам на звонки",
       description: "Агент отвечает на звонки клиентам, опираясь на базу данных, которую ему предоставили",
-      technologies: "AI, Voice Recognition, Database Integration",
-      image: process.env.PUBLIC_URL + "/images/avtotpr.png",
-      demoUrl: "#"
+      technologies: "AI, Voice Recognition, Database Integration"
     }
   ];
 
@@ -40,9 +38,11 @@ const ProjectsSection = () => {
         <div className="projects-grid">
           {projects.map(project => (
             <div key={project.id} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-              </div>
+              {project.image && (
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                </div>
+              )}
               <div className="project-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
@@ -50,9 +50,9 @@ const ProjectsSection = () => {
                 <div className="project-links">
                   {project.id === 2 ? (
                     <button className="btn" onClick={handleNoWebsiteClick}>Нет сайта?</button>
-                  ) : (
+                  ) : project.demoUrl ? (
                     <a href={project.demoUrl} className="btn" target="_blank" rel="noopener noreferrer">Подробнее</a>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </div>
