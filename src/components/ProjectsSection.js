@@ -18,6 +18,14 @@ const ProjectsSection = () => {
       technologies: "JavaScript, Google Sheets API, Webhooks",
       image: process.env.PUBLIC_URL + "/images/avtotpr.png",
       demoUrl: "#"
+    },
+    {
+      id: 3,
+      title: "Агент который отвечает вашим клиентам на звонки",
+      description: "Агент отвечает на звонки клиентам, опираясь на базу данных, которую ему предоставили",
+      technologies: "AI, Voice Recognition, Database Integration",
+      image: process.env.PUBLIC_URL + "/images/avtotpr.png",
+      demoUrl: "#"
     }
   ];
 
